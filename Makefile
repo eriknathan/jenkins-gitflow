@@ -5,5 +5,3 @@ create:
 
 destroy:
 	@kind delete cluster kind
-	
-
