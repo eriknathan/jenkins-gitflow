@@ -22,3 +22,5 @@ destroy:
 passwd:
 	@echo "Jenkins >>>"
 	@kubectl get secret -n jenkins jenkins -ojson | jq -r '.data."jenkins-admin-password"' | base64 -d
+	@echo "Sonarqube >>>"
+	@admin12345
