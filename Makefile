@@ -8,10 +8,13 @@ pre:
 		--timeout=300s
 	@kubectl apply -f ./manifests/
 
+helm:
+	@helmfile apply
+
 create:
 	@kind create cluster --config config.yaml
 	
-up: create pre
+up: create pre helm
 
 destroy:
 	@kind delete clusters kind
